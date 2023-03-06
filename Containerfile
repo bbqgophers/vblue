@@ -14,6 +14,7 @@ ADD packages.json /tmp/packages.json
 
 COPY --from=ghcr.io/ublue-os/config:latest /rpms /tmp/rpms
 COPY --from=ghcr.io/bketelsen/vanilla-os:v0.0.11 /usr/share/backgrounds/vanilla /usr/share/backgrounds/vanilla
+COPY --from=ghcr.io/bketelsen/vanilla-os:v0.0.11 /usr/share/gnome-background-properties/vanilla.xml /usr/share/gnome-background-properties/vanilla.xml
 
 RUN /tmp/build.sh
 RUN /tmp/post-install.sh
