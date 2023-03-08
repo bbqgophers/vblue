@@ -15,6 +15,8 @@ ADD packages.json /tmp/packages.json
 COPY --from=ghcr.io/ublue-os/config:latest /rpms /tmp/rpms
 COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/share/backgrounds/vanilla /usr/share/backgrounds/vanilla
 COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/bin/apx /usr/bin/apx
+COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /etc/apx/config.json /etc/apx/config.json
+COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/lib/apx/distrobox /usr/lib/apx/distrobox
 
 RUN /tmp/build.sh
 RUN /tmp/post-install.sh
