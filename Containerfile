@@ -14,10 +14,7 @@ ADD packages.json /tmp/packages.json
 
 COPY --from=ghcr.io/ublue-os/config:latest /rpms /tmp/rpms
 COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/share/backgrounds/vanilla /usr/share/backgrounds/vanilla
-COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/share/gnome-background-properties/vanilla.xml /usr/share/gnome-background-properties/vanilla.xml
-COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/share/plymouth/themes/vanilla-text/ /usr/share/plymouth/themes/vanilla-text/
-COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/share/plymouth/themes/vanilla-logo/ /usr/share/plymouth/themes/vanilla-logo/
-COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/share/plymouth/themes/vanilla-bgrt/ /usr/share/plymouth/themes/vanilla-bgrt/
+COPY --from=docker.io/bketelsen/vanilla-os:v0.0.11 /usr/bin/apx /usr/bin/apx
 
 RUN /tmp/build.sh
 RUN /tmp/post-install.sh
