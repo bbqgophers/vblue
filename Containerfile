@@ -8,6 +8,10 @@ FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS builder
 ARG IMAGE_NAME="${IMAGE_NAME}"
 ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
 
+COPY etc /etc
+COPY vanilla-firstboot /usr/bin
+COPY recipe.yml /etc/vanilla-recipe.yml
+
 ADD build.sh /tmp/build.sh
 ADD post-install.sh /tmp/post-install.sh
 ADD packages.json /tmp/packages.json
