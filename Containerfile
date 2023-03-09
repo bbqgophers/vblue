@@ -47,7 +47,7 @@ RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator \
     rm -f /etc/yum.repos.d/sunwire-input-remapper-fedora-37.repo && \
     rm -f /etc/yum.repos.d/kylegospo-webapp-manager-fedora-37.repo && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf && \
-    sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
+    sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf 
 RUN /tmp/build.sh
 RUN /tmp/post-install.sh
 RUN rm -rf /tmp/* /var/*
