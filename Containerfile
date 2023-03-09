@@ -48,8 +48,4 @@ RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator \
     rm -f /etc/yum.repos.d/kylegospo-webapp-manager-fedora-37.repo && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf 
-RUN /tmp/build.sh
-RUN /tmp/post-install.sh
-RUN rm -rf /tmp/* /var/*
-RUN ostree container commit
-RUN mkdir -p /var/tmp && chmod -R 1777 /var/tmp
+
