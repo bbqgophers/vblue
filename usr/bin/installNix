@@ -1,5 +1,4 @@
 #!/bin/sh
 
+systemctl enable --now ensure-nix.service
 systemctl enable --now nix.mount
-
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
