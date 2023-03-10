@@ -33,14 +33,13 @@ RUN rpm-ostree override remove gnome-software-rpm-ostree firefox firefox-langpac
 RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator \
     gnome-shell-extension-blur-my-shell gnome-shell-extension-gsconnect nautilus-gsconnect \
     libgda libgda-sqlite libratbag-ratbagd openssl podman-docker python3-input-remapper \
-    tailscale @virtualization wireguard-tools webapp-manager && \
+    tailscale virt-manager wireguard-tools webapp-manager && \
     rm -f /var/lib/unbound/root.key && \
     rm -f /var/lib/freeipmi/ipckey && \
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
     systemctl enable tailscaled.service && \
-    systemctl enable libvirtd.service && \
     fc-cache -f /usr/share/fonts/ubuntu && \
     rm -f /etc/yum.repos.d/terra.repo && \
     rm -f /etc/yum.repos.d/_copr_kylegospo-gnome-vrr.repo && \
