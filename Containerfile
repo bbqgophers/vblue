@@ -9,6 +9,7 @@ ARG IMAGE_NAME="${IMAGE_NAME}"
 ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
 
 COPY etc /etc
+COPY usr/bin/installNix /usr/bin
 COPY vanilla-firstboot /usr/bin
 COPY recipe.yml /etc/vanilla-recipe.yml
 
