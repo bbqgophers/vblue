@@ -12,8 +12,6 @@ COPY etc /etc
 COPY vanilla-firstboot /usr/bin
 COPY recipe.yml /etc/vanilla-recipe.yml
 
-ADD build.sh /tmp/build.sh
-ADD post-install.sh /tmp/post-install.sh
 ADD packages.json /tmp/packages.json
 COPY --from=ghcr.io/ublue-os/config:latest /files/ublue-os-udev-rules /
 COPY --from=ghcr.io/ublue-os/config:latest /files/ublue-os-update-services /
