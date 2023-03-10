@@ -12,7 +12,6 @@ COPY etc /etc
 COPY vanilla-firstboot /usr/bin
 COPY recipe.yml /etc/vanilla-recipe.yml
 
-ADD packages.json /tmp/packages.json
 COPY --from=ghcr.io/ublue-os/config:latest /files/ublue-os-udev-rules /
 COPY --from=ghcr.io/ublue-os/config:latest /files/ublue-os-update-services /
 COPY --from=ghcr.io/ublue-os/config:latest /rpms /tmp/rpms
