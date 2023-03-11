@@ -1,4 +1,5 @@
 #!/bin/sh
 
+systemctl daemon-reload
 systemctl enable --now ensure-nix.service
 systemctl enable --now nix.mount
