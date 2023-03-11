@@ -33,7 +33,7 @@ RUN rpm-ostree override remove gnome-software-rpm-ostree firefox firefox-langpac
 RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator \
     gnome-shell-extension-blur-my-shell gnome-shell-extension-gsconnect nautilus-gsconnect \
     libgda libgda-sqlite libratbag-ratbagd openssl podman-docker python3-input-remapper \
-    tailscale virt-manager wireguard-tools webapp-manager && \
+    tailscale virt-manager wireguard-tools webapp-manager xprop && \
     rm -f /var/lib/unbound/root.key && \
     rm -f /var/lib/freeipmi/ipckey && \
     systemctl unmask dconf-update.service && \
